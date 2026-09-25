@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Django
+media/images/profile/*
+!media/images/profile/.gitkeep
+
+# Environment and editor files
+.env
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Test and coverage artifacts
+.coverage
+htmlcov/
