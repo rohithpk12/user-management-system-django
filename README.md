@@ -1,42 +1,46 @@
+website : https://projectworlds.in/
+
 # User Management System
 
-A Django-based user management application with role-based access control for administrators and customers.
+Roles: 
+1. Admin
+2. Customer
 
-## Features
+Admin:
+1. Admin can Create, Update, Read and Delete User.
+2. Only Admin can access Create, Update, List and DeleteView.
 
-- Admin and customer account roles
-- Admin-only user creation, listing, updates, and deletion
-- Customer registration and self-service profile updates
-- Profile photo uploads with automatic compression for images larger than 1 MB
-- Authentication, alert messages, navigation, sidebar, and dark dashboard theme
-- Custom Django user model built on `AbstractUser`
+Customer:
+1. Customer can Register himself.
+2. He can Watch and Update his profile with profile photo(using signals).
+3. He can't access User's Create, Update, List, Delete Page(using custom Mixins).
 
-## Technology
 
-- Python 3.10
-- Django 4.1.6
-- SQLite for local development
-- Bootstrap 5 and Django Crispy Forms
-- Pillow for image handling
+# Versions
+1. Python - 3.10
+2. Django - 4.1.6
+3. Postgresql - 15.0
+4. Template - 'Corona' by Bootstrap Dash.
 
-## Run locally
+# Features
+1. Crispy Forms
+2. sqlite
+3. Profile Image
+4. Media File Configuration
+5. Login
+6. Register
+7. Forms
+8. Abstract User
+9. Auto Compression for > 1 MB photo.
+10. Navbar
+11. Sidebar
+12. Footer
+13. Dark Theme
+14. Material Icons
+15. Profile Avatars
+16. Bootstrap
+17. Customer Counter
+18. Alert Messages
 
-```bash
-git clone https://github.com/rohithpk12/user-management-system-django.git
-cd user-management-system-django
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
-pip install -r requirements.txt
-cp .env.example .env  # Windows: copy .env.example .env
-python manage.py migrate
-python manage.py runserver
-```
 
-Open `http://127.0.0.1:8000/` in your browser.
-
-## Security notes
-
-- The local SQLite database is intentionally excluded from version control.
-- Set `DJANGO_SECRET_KEY` and `DJANGO_ALLOWED_HOSTS` with environment variables before deployment.
-- Create an administrator account locally with `python manage.py createsuperuser`.
 
